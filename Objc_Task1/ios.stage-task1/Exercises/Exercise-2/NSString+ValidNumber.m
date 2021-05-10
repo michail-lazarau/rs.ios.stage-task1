@@ -3,7 +3,10 @@
 @implementation NSString (ValidNumber)
 
 - (BOOL)isValidNumber {
-    return false;
+    NSNumberFormatter *intFormatter = [[NSNumberFormatter alloc] init];
+    NSNumber *rawNum = [intFormatter numberFromString:self];
+    
+    return rawNum != nil ? YES : NO;
 }
 
 @end

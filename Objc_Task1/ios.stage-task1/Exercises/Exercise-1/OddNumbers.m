@@ -11,7 +11,14 @@
 @implementation OddNumbers
 
 - (NSInteger)oddNumbers:(NSArray <NSNumber *> *)array {
-    return -1;
+    NSInteger count = 0;
+    for (NSNumber *num in array){
+        if ([num intValue] % 2 != 0) {
+            count++;
+        }
+    }
+    return count;
+//    NSPredicate *predicate = [NSPredicate predicateWithValue: (NSNumber *) intValue % 2 != 0];
 }
 
 @end
